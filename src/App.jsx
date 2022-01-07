@@ -25,7 +25,7 @@ const App = () => {
             city: city
         }
 
-        Axios.post('http://localhost:5000/forecast', data).then(
+        Axios.post('https://weather-marko.herokuapp.com/forecast', data).then(
             (r)=>{
                 if(r.data!=='error'){
                     console.log(r.data)
