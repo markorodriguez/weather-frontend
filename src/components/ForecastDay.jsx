@@ -12,9 +12,6 @@ const ForecastDay = (props) => {
                         <p><span className="font-bold text-gray-800  mr-2">Condition: </span>{props.conditionText}</p>
                     </div>
                 </div>
-                <div className="text-gray-800">
-                   <h3>Made with ♥ by <a className="decoration-none" href="https://github.com/markorodriguez">Marko</a></h3>
-                </div>
         </div>
     );
 };

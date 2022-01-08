@@ -16,6 +16,11 @@ const App = () => {
     const [city, setCity] = useState('')
     const [data, setData] = useState('')
     const [fetched, setFeched] = useState(false)
+
+    const headers = {
+        'Content-Type': 'text/plain'
+    };
+
     const getCityState = (value) => {
         setCity(value)
     }
@@ -25,7 +30,7 @@ const App = () => {
             city: city
         }
 
-        Axios.post('https://weather-marko.herokuapp.com/forecast', data).then(
+        Axios.post('https://app-marko-weather.herokuapp.com/forecast', data, headers).then(
             (r)=>{
                 if(r.data!=='error'){
                     console.log(r.data)
@@ -87,6 +92,10 @@ const App = () => {
                     
                 </div>
             </div> : null}
+            <div class="md:fixed md:bottom-0 relative w-full text-center text-gray-400">
+      <span>Made with ♥ by <a class="font-bold underline hover:text-cyan-500 transition-all" href="https://github.com/markorodriguez">Marko</a>.</span>
+    </div>
+
 
         </div>
     )
