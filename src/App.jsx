@@ -39,7 +39,7 @@ const App = () => {
                 }else{
                     setFeched(false)
                     onOpenModal()
-                    console.log('abrete modal poronga')
+                    
                 }
                 
             }
